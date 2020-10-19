@@ -32,11 +32,40 @@
         console.log( meanOf );
 
         // another eg - console.log( mean( [ 32, 67, 99, 300, 12, 90] ) );
-        // mean function
+        // Mean function
 
         // Median function
 
-        
+        function median( arr ) {
+
+            var median = 0;
+            var arrLen = arr.length;
+                arr.sort();
+
+                if ( arrLen % 2 === 0) { //even
+                // average of two middle numbers
+                median = ( arr[ arrLen / 2 - 1 ] );
+
+
+                } else { // is odd
+
+                //middle number only
+                median =  arr[ (arrLen -1) / 2 ];
+
+
+
+                }
+
+                return median; 
+
+
+        }
+
+        var medianOf = median ( data );
+
+        console.log( medianOf );
+
+
 
 
 
