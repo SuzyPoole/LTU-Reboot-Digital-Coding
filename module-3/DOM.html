@@ -11,6 +11,7 @@
 
     <p class="paragraph2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nulla excepturi natus necessitatibus. Fuga, molestias corrupti nihil sequi esse nesciunt adipisci, omnis itaque quod nulla odio, nobis accusamus ducimus repellendus.</p>
 
+    <img src="https://images.unsplash.com/photo-1579395896480-bc874b4b4de4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
 <script>
 
 var paragraph1 = document.querySelector('#paragraph1');
@@ -20,8 +21,18 @@ var paragraph2 = document.querySelector('.paragraph2');
 // var paragraph2 = document.getElementByClass('paragraph2');
 // paragraph2[0] etc
 
-console.log( paragraph1 );
-console.log( paragraph2);
+// https://images.unsplash.com/photo-1603123853880-a92fafb7809f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=60
+
+var image1 = document.querySelector('img'); // gets hold of the image
+
+     var imageSource = image1.getAttribute('src'); // gets the source of the picture
+
+    image1.setAttribute('src', 'https://images.unsplash.com/photo-1603123853880-a92fafb7809f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=60');
+    
+//console.log( imageSource );
+//console.log( image1 );
+//console.log( paragraph1 );
+//console.log( paragraph2 );
 
 
 </script>
