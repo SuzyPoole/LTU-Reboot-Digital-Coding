@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<scrip>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3.5.3</title>
 </head>
 <body>
-<script>
-let shoppingCart = [
+    <script>
+    let shoppingCart = [
 {
 name:"loaf of bread",
 type:"food",
@@ -69,11 +69,40 @@ quantity:3,
 price:.4
 }];
 
+// 1. create a function that takes 1 argument
+
+function discountForFood( arr ) {
+
+    // 2. create a variable inside our function called totalPrice
+  
+  let totalPrice = 0; 
+ 
+ //3. loop through each item in the array and add the value of the item to the total price
+//rememember to account for the quantity as well
+  for ( let index = 0; index < arr.length; index++ ) { 
+    
+        
+//4. if the item has a type of food, apply a 20% discount
+    if (arr[ index ].type === 'food') {
+      
+      let discount = ( arr[ index ].price * 20 ) / 100;
+      
+          totalPrice = totalPrice + ( arr[ index ].price - discount ) *arr[ index ].quantity ;
+      
+    } else {
+      
+      totalPrice = totalPrice + ( arr[ index ].price * arr[ index ].quantity );
+      
+    }
+    
+  }
+  
+  // 5 . Return the total price
+  return totalPrice.toFixed( 2 );
 
 
-
-
-
+console.log( discountForFood(shoppingCart) );
 </script>
 </body>
 </html>
+
